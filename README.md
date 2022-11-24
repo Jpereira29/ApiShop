@@ -50,6 +50,11 @@ altere o usuário e senha da string de conexão para seu usuário:
   },
 ```
 
+### populando as tabelas
+```bash
+dotnet ef database update
+```
+
 ### Rode o projeto
 ```bash
 dotnet run dev
