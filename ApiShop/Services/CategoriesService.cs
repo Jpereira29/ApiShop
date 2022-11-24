@@ -30,7 +30,7 @@ namespace ApiShop.Services
 
         public async Task<Category> CreateAsync(Category category)
         {
-            var obj = _context.Categories.FirstOrDefault(p => p.Name == category.Name);
+            var obj = await _context.Categories.FirstOrDefaultAsync(p => p.Name == category.Name);
             if (obj != null)
             {
                 throw new Exception("this category already exists!");
@@ -42,7 +42,7 @@ namespace ApiShop.Services
 
         public async Task<Category> UpdateAsync(int id, Category category)
         {
-            var obj = _context.Categories.AsNoTracking().FirstOrDefault(p => p.CategoryId == category.CategoryId);
+            var obj = await _context.Categories.AsNoTracking().FirstOrDefaultAsync(p => p.CategoryId == category.CategoryId);
 
             if (id != category.CategoryId ||
                 obj is null)
