@@ -50,7 +50,7 @@ altere o usuário e senha da string de conexão para seu usuário:
   },
 ```
 
-### populando as tabelas
+### Populando as tabelas
 ```bash
 dotnet ef database update
 ```
